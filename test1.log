@@ -1,0 +1,68 @@
+sudo ./nvflash --rawdeviceread 0 100 all.img --bl fastboot.bin --go
+Nvflash 4.13.0000 started
+BR_CID: 0x34001001740de10320000000160383c0
+rcm version 0X400001
+System Information:
+   chip name: unknown
+   chip id: 0x40 major: 1 minor: 1
+   chip sku: 0x0
+   chip uid: 0x00000001740de10320000000160383c0
+   macrovision: disabled
+   hdcp: disabled
+   jtag: disabled
+   sbk burned: false
+   board id: 0
+   warranty fuse: 0
+   dk burned: false
+   boot device: emmc
+   operating mode: 6
+   device config strap: 0
+   device config fuse: 0
+   sdram config strap: 0
+
+RCM communication completed
+downloading bootloader -- load address: 0x83d88000 entry point: 0x83d88000
+sending file: fastboot.bin
+- 594363/594363 bytes sent
+fastboot.bin sent successfully
+waiting for bootloader to initialize
+bootloader failed NvError 0x0
+command failure/warning: bootloader download failed (bad data)
+bootloader status: bootloader validation failed (code: 30) message: nverror:0xd0010 (0x1d0010) DownloadBootloader 995 flags: 0
+
+
+
+sudo ./nvflash_4.13.0000_miniloader_patched --rawdeviceread 0 100 all.img --bl fastboot.bin --go
+Nvflash 4.13.0000 started
+BR_CID: 0x34001001740de10320000000160383c0
+rcm version 0X400001
+System Information:
+   chip name: unknown
+   chip id: 0x40 major: 1 minor: 1
+   chip sku: 0x0
+   chip uid: 0x00000001740de10320000000160383c0
+   macrovision: disabled
+   hdcp: disabled
+   jtag: disabled
+   sbk burned: false
+   board id: 0
+   warranty fuse: 0
+   dk burned: false
+   boot device: emmc
+   operating mode: 3
+   device config strap: 0
+   device config fuse: 0
+   sdram config strap: 0
+
+RCM communication completed
+downloading bootloader -- load address: 0x83d88000 entry point: 0x83d88000
+sending file: fastboot.bin
+- 594363/594363 bytes sent
+fastboot.bin sent successfully
+waiting for bootloader to initialize
+bootloader downloaded successfully
+Bytes to receive 409600
+Receiving file: all.img, expected size: 409600 bytes
+/ 409600/409600 bytes received
+file received successfully
+Time taken for flashing 4 Secs
