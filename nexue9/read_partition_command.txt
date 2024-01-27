@@ -1,0 +1,2 @@
+sudo ./nvflash_4.13.0000_miniloader_patched --read EKS eks.bin --bl hboot.img --preboot mts_preboot_prod --bootpack mts_prod --applet nvtboot_patched.img
+
